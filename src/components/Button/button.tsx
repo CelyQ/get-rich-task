@@ -1,5 +1,7 @@
-import classNames from 'classnames'
 import { Yellow as YellowShape } from './yellow'
+import { Green as GreenShape } from './green'
+import { Purple as PurpleShape } from './purple'
+import { Blue as BlueShape } from './blue'
 
 import { SELECTION } from '../../App'
 
@@ -12,31 +14,61 @@ export default function Button({
   type: SELECTION
   onClick: () => void
 }) {
-  const getFillColor = () => {
+  const getShapeWidthClass = () => {
     switch (type) {
       case 'PLAYER':
-        return '#A9B12B'
+        return 'w-[227px]'
       case 'CONTRIBUTOR':
-        return '#29B149'
+        return 'w-[167px]'
       case 'INVESTOR':
-        return '#FF40C1'
+        return 'w-[298px]'
       case 'AFFILIATE':
-        return '#0F7EB7'
+        return 'w-[307px]'
       default:
         return ''
     }
   }
 
-  const className = classNames({
-    'group-hover/button:fill-[#7B8300]': type === 'PLAYER',
-    'group-hover/button:fill-[#05711E]': type === 'CONTRIBUTOR',
-    'group-hover/button:fill-[#D82EA0]': type === 'INVESTOR',
-    'group-hover/button:fill-[#004467]': type === 'AFFILIATE'
-  })
+  const renderShape = () => {
+    switch (type) {
+      case 'PLAYER':
+        return (
+          <YellowShape
+            color="#A9B12B"
+            className="group-hover/button:fill-[#7B8300]"
+          />
+        )
+      case 'CONTRIBUTOR':
+        return (
+          <GreenShape
+            color="#29B149"
+            className="group-hover/button:fill-[#05711E]"
+          />
+        )
+      case 'INVESTOR':
+        return (
+          <PurpleShape
+            color="#FF40C1"
+            className="group-hover/button:fill-[#D82EA0]"
+          />
+        )
+      case 'AFFILIATE':
+        return (
+          <BlueShape
+            color="#0F7EB7"
+            className="group-hover/button:fill-[#004467]"
+          />
+        )
+      default:
+        return <></>
+    }
+  }
 
   return (
-    <button className="relative w-[227px] h-[44px] flex justify-center items-center cursor-pointer group/button">
-      <YellowShape color={getFillColor()} className={className} />
+    <button
+      className={`relative h-[44px] ${getShapeWidthClass()} flex justify-center items-center cursor-pointer group/button`}
+    >
+      {renderShape()}
       <span className="text-white relative z-10">{text}</span>
     </button>
   )
