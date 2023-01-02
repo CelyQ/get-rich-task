@@ -51,7 +51,9 @@ export default function App() {
   }
 
   return (
-    <div className={`h-full w-full bg-[#1d1f21] ${classes.gridbox}`}>
+    <div
+      className={`h-full w-full min-h-screen bg-[#1d1f21] ${classes.gridbox}`}
+    >
       <div className="container mx-auto">{renderScreen()}</div>
     </div>
   )
