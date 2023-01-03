@@ -42,8 +42,7 @@ export default function App() {
         </ParallaxLayer>
 
         <ParallaxLayer
-          offset={1 + screenOffset}
-          speed={1.5}
+          speed={1}
           sticky={{
             start: 1 + screenOffset,
             end: 2 + screenOffset
@@ -53,8 +52,7 @@ export default function App() {
         </ParallaxLayer>
         <ParallaxLayer
           id="player"
-          offset={1 + screenOffset}
-          speed={1.5}
+          speed={0.5}
           sticky={{
             start: 1.5 + screenOffset,
             end: 2 + screenOffset
@@ -65,7 +63,7 @@ export default function App() {
         </ParallaxLayer>
 
         <ParallaxLayer
-          speed={1.5}
+          speed={1}
           sticky={{
             start: 4 + screenOffset,
             end: 5 + screenOffset
@@ -75,7 +73,7 @@ export default function App() {
         </ParallaxLayer>
         <ParallaxLayer
           id="contributor"
-          speed={1.5}
+          speed={0.5}
           sticky={{
             start: 4.5 + screenOffset,
             end: 5 + screenOffset
@@ -86,7 +84,7 @@ export default function App() {
         </ParallaxLayer>
 
         <ParallaxLayer
-          speed={1.5}
+          speed={1}
           sticky={{
             start: 6.5 + screenOffset,
             end: 9 + screenOffset
@@ -97,7 +95,7 @@ export default function App() {
         <ParallaxLayer
           id="investor"
           offset={5 + screenOffset}
-          speed={1.5}
+          speed={0.5}
           sticky={{
             start: 7 + screenOffset,
             end: 9 + screenOffset
@@ -108,7 +106,7 @@ export default function App() {
         </ParallaxLayer>
 
         <ParallaxLayer
-          speed={1.5}
+          speed={1}
           sticky={{
             start: 10.5 + screenOffset,
             end: 11 + screenOffset
@@ -118,8 +116,7 @@ export default function App() {
         </ParallaxLayer>
         <ParallaxLayer
           id="affiliate"
-          offset={7 + screenOffset}
-          speed={1.5}
+          speed={0.5}
           sticky={{
             start: 11 + screenOffset,
             end: 11 + screenOffset
