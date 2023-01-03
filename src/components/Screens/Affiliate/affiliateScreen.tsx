@@ -5,7 +5,7 @@ export default function () {
   return (
     <div
       id="affiliate"
-      className="flex flex-col w-full h-screen max-h-[-webkit-fill-available] justify-center items-center container"
+      className="flex flex-col w-full h-screen max-h-[-webkit-fill-available] justify-center items-center container mx-auto"
     >
       <div className="h-[293px] md:w-[445px] md:h-[334px]">
         <img

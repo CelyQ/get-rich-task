@@ -1,26 +1,56 @@
 import { Button } from '../../Button'
 import playerScreenSVG from '../../../assets/heroes/player.svg'
+import { ParallaxLayer } from '@react-spring/parallax'
 
-export default function PlayerScreen() {
+export default function PlayerScreen({
+  screenOffset
+}: {
+  screenOffset: number
+}) {
   return (
-    <div
-      id="player"
-      className="flex flex-col w-full h-screen max-h-[-webkit-fill-available] justify-center items-center container"
-    >
-      <div className="h-[293px] md:w-[445px] md:h-[334px]">
-        <img
-          src={playerScreenSVG}
-          alt=""
-          className="motion-safe:animate-pulse w-full"
-        />
-      </div>
-      <h2 className="text-white text-2xl pt-8">The Player</h2>
-      <p className="text-[#666666] text-sm md:max-w-[560px] text-center py-8">
-        Donec rhoncus odio lacus, non blandit justo porttitor in. Curabitur
-        tincidunt, metus sit amet cursus commodo, nisi nunc faucibus risus, eu
-        dictum est
-      </p>
-      <Button type={'PLAYER'} onClick={() => {}} text="START PLAYING NOW" />
-    </div>
+    // <div
+    //   id="player"
+    //   className="flex flex-col w-full h-screen max-h-[-webkit-fill-available] justify-center items-center container mx-auto"
+    // >
+    <>
+      <ParallaxLayer
+        offset={1 + screenOffset}
+        speed={1.5}
+        sticky={{
+          start: 1.5 + screenOffset,
+          end: 2 + screenOffset
+        }}
+      >
+        <div className="container mx-auto flex justify-center items-end h-3/5">
+          <div className="h-[293px] md:w-[445px] md:h-[334px]">
+            <img
+              src={playerScreenSVG}
+              alt=""
+              className="motion-safe:animate-pulse w-full"
+            />
+          </div>
+        </div>
+      </ParallaxLayer>
+      <ParallaxLayer
+        offset={1 + screenOffset}
+        speed={1.5}
+        sticky={{
+          start: 1.5 + screenOffset,
+          end: 2 + screenOffset
+        }}
+      >
+        <div className="container mx-auto flex flex-col justify-start items-center h-2/5">
+          <h2 className="text-white text-2xl pt-8">The Player</h2>
+          <p className="text-[#666666] text-sm md:max-w-[560px] text-center py-8">
+            Donec rhoncus odio lacus, non blandit justo porttitor in. Curabitur
+            tincidunt, metus sit amet cursus commodo, nisi nunc faucibus risus,
+            eu dictum est
+          </p>
+          <Button type={'PLAYER'} onClick={() => {}} text="START PLAYING NOW" />
+        </div>
+      </ParallaxLayer>
+
+      {/* </div> */}
+    </>
   )
 }
