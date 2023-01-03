@@ -10,10 +10,10 @@ export default function MainScreen({
 }) {
   return (
     <Fragment>
-      <section className="flex flex-col items-center gap-1 pt-32 md:pt-40">
+      <section className="flex flex-col items-center gap-1 pt-16 md:pt-40">
         <HoloText />
         <h3 className="uppercase text-white">WITH BLACKJACK.FUN</h3>
-        <div className="flex flex-col gap-0.5 items-center py-11 text-sm px-8">
+        <div className="flex flex-col gap-0.5 items-center py-8 text-sm px-8">
           <p className="text-[#666666] text-center py-2 md:py-0">
             BlackJack.fun is a complete Crypto Casino, with a focus on Blackjack
             Games.
@@ -33,7 +33,7 @@ export default function MainScreen({
           <h2 className="uppercase text-white text-2xl text-center">
             SELECT YOUR CHARACTER
           </h2>
-          <div className="h-full py-20 grid grid-cols-1 gap-y-20 sm:grid-cols-2 md:grid-cols-4 gap-x-8 md:gap-[56px] justify-center items-center flex-wrap">
+          <div className="h-full py-10 md:py-20 grid grid-cols-2 gap-y-20 sm:grid-cols-2 md:grid-cols-4 gap-x-8 md:gap-[56px] justify-center items-center flex-wrap">
             <Card.Player onClick={() => handleClick('PLAYER')} />
             <Card.Contributor onClick={() => handleClick('CONTRIBUTOR')} />
             <Card.Investor onClick={() => handleClick('INVESTOR')} />

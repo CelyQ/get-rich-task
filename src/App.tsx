@@ -29,12 +29,15 @@ export default function App() {
   const { width } = useWindowSize()
   const isMobile = width < 768
 
+  console.log('isMobile', isMobile)
+  console.log('width', width, 'px')
+
   const screenOffset = isMobile ? 1 : 0
 
   return (
     <div className={`h-fit w-full bg-[#1d1f21] ${classes.gridbox}`}>
-      <Parallax pages={8.5 + screenOffset}>
-        <ParallaxLayer factor={1.5 + screenOffset} offset={0}>
+      <Parallax pages={12 + screenOffset}>
+        <ParallaxLayer offset={0}>
           <MainScreen handleClick={handleClick} />
         </ParallaxLayer>
 
@@ -62,22 +65,20 @@ export default function App() {
         </ParallaxLayer>
 
         <ParallaxLayer
-          offset={3 + screenOffset}
           speed={1.5}
           sticky={{
-            start: 3 + screenOffset,
-            end: 4 + screenOffset
+            start: 4 + screenOffset,
+            end: 5 + screenOffset
           }}
         >
           <HeroHeader src={contributorHeroSVG} />
         </ParallaxLayer>
         <ParallaxLayer
           id="contributor"
-          offset={3 + screenOffset}
           speed={1.5}
           sticky={{
-            start: 3.5 + screenOffset,
-            end: 4 + screenOffset
+            start: 4.5 + screenOffset,
+            end: 5 + screenOffset
           }}
           className="flex items-end"
         >
@@ -85,11 +86,10 @@ export default function App() {
         </ParallaxLayer>
 
         <ParallaxLayer
-          offset={5 + screenOffset}
           speed={1.5}
           sticky={{
-            start: 5 + screenOffset,
-            end: 6 + screenOffset
+            start: 6.5 + screenOffset,
+            end: 9 + screenOffset
           }}
         >
           <HeroHeader src={investorHeroSVG} />
@@ -99,8 +99,8 @@ export default function App() {
           offset={5 + screenOffset}
           speed={1.5}
           sticky={{
-            start: 5.5 + screenOffset,
-            end: 6 + screenOffset
+            start: 7 + screenOffset,
+            end: 9 + screenOffset
           }}
           className="flex items-end"
         >
@@ -108,11 +108,10 @@ export default function App() {
         </ParallaxLayer>
 
         <ParallaxLayer
-          offset={7 + screenOffset}
           speed={1.5}
           sticky={{
-            start: 7 + screenOffset,
-            end: 8 + screenOffset
+            start: 10.5 + screenOffset,
+            end: 11 + screenOffset
           }}
         >
           <HeroHeader src={affiliateHeroSVG} />
@@ -122,8 +121,8 @@ export default function App() {
           offset={7 + screenOffset}
           speed={1.5}
           sticky={{
-            start: 7.5 + screenOffset,
-            end: 8 + screenOffset
+            start: 11 + screenOffset,
+            end: 11 + screenOffset
           }}
           className="flex items-end"
         >
