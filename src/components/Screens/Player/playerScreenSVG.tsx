@@ -2,8 +2,7 @@ export default function PlayerScreenSVG() {
   return (
     <svg
       width={445}
-      height={334}
-      className="md:w-[445px] md:h-[334px] w-full h-full"
+      className="md:w-[445px] md:h-[334px] w-full h-full max-h-[334px] max-w-[445px]"
       viewBox="0 0 445 334"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"

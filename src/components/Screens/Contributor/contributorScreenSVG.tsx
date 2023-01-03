@@ -2,9 +2,8 @@ export default function ContributorScreenSVG() {
   return (
     <svg
       width={445}
-      height={321}
       viewBox="0 0 445 321"
-      className="md:w-[445px] md:h-[321px] w-full h-full"
+      className="md:w-[445px] md:h-[321px] w-full h-full max-h-[321px] max-w-[445px]"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
