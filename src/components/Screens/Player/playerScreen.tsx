@@ -11,9 +11,7 @@ export default function PlayerScreen() {
         tincidunt, metus sit amet cursus commodo, nisi nunc faucibus risus, eu
         dictum est
       </p>
-      <div className="pb-8">
-        <Button type={'PLAYER'} onClick={() => {}} text="START PLAYING NOW" />
-      </div>
+      <Button type={'PLAYER'} onClick={() => {}} text="START PLAYING NOW" />
     </div>
   )
 }

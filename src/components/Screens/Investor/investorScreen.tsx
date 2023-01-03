@@ -11,13 +11,12 @@ export default function InvestorScreen() {
         tincidunt, metus sit amet cursus commodo, nisi nunc faucibus risus, eu
         dictum est
       </p>
-      <div className="pb-8">
-        <Button
-          type={'INVESTOR'}
-          onClick={() => {}}
-          text="CONTACT A REPRESENTATIVE"
-        />
-      </div>
+
+      <Button
+        type={'INVESTOR'}
+        onClick={() => {}}
+        text="CONTACT A REPRESENTATIVE"
+      />
     </div>
   )
 }

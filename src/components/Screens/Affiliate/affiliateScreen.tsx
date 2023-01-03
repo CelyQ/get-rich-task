@@ -11,13 +11,12 @@ export default function () {
         tincidunt, metus sit amet cursus commodo, nisi nunc faucibus risus, eu
         dictum est
       </p>
-      <div className="pb-8">
-        <Button
-          type={'AFFILIATE'}
-          onClick={() => {}}
-          text="TO OUR AFFILIATE PLATFORM"
-        />
-      </div>
+
+      <Button
+        type={'AFFILIATE'}
+        onClick={() => {}}
+        text="TO OUR AFFILIATE PLATFORM"
+      />
     </div>
   )
 }

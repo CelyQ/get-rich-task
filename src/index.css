@@ -5,6 +5,6 @@
 @tailwind utilities;
 
 #root {
-  @apply h-full w-full grid min-h-screen;
+  @apply h-full w-full grid;
   font-family: 'Poppins', sans-serif;
 }
