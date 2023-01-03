@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import classNames from 'classnames'
 
 import classes from './App.module.css'
+
 import {
   Main as MainScreen,
   Player as PlayerScreen,
@@ -83,7 +84,7 @@ export default function App() {
   }
 
   return (
-    <div className={`h-full w-full bg-[#1d1f21] ${classes.gridbox}`}>
+    <div className={`h-fit w-full bg-[#1d1f21] ${classes.gridbox}`}>
       {renderBackButton()}
       <div className="container mx-auto max-h-[-webkit-fill-available]">
         {renderScreen()}
