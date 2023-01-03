@@ -4,7 +4,7 @@ import ContributorScreenSVG from './contributorScreenSVG'
 export default function ContributorScreen() {
   return (
     <div
-      className={`flex flex-col w-full h-full min-h-[fill-available] justify-center items-center container`}
+      className={`flex flex-col w-full h-full justify-center items-center container`}
     >
       <ContributorScreenSVG />
       <h2 className="text-white text-2xl">The Contribuitor</h2>

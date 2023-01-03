@@ -11,7 +11,7 @@ export default function MainScreen({
 }) {
   return (
     <Fragment>
-      <section className="flex flex-col items-center gap-1 mt-32 md:mt-40">
+      <section className="flex flex-col items-center gap-1 pt-32 md:pt-40">
         <HoloText />
         <h3 className="uppercase text-white">WITH BLACKJACK.FUN</h3>
         <div className="flex flex-col gap-0.5 items-center py-11 text-sm px-8">
@@ -29,12 +29,12 @@ export default function MainScreen({
           </a>
         </div>
       </section>
-      <section>
+      <section className="">
         <div className="py-11 flex flex-col items-center">
-          <h2 className="uppercase text-white text-2xl">
+          <h2 className="uppercase text-white text-2xl text-center">
             SELECT YOUR CHARACTER
           </h2>
-          <div className="py-11 flex gap-8 md:gap-[56px] justify-center items-center flex-wrap">
+          <div className="h-full py-20 grid grid-cols-1 gap-y-20 sm:grid-cols-2 md:grid-cols-4 gap-x-8 md:gap-[56px] justify-center items-center flex-wrap">
             <Card.Player onClick={() => handleClick('PLAYER')} />
             <Card.Contributor onClick={() => handleClick('CONTRIBUTOR')} />
             <Card.Investor onClick={() => handleClick('INVESTOR')} />
