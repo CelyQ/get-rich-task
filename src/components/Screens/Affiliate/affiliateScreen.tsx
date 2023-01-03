@@ -3,7 +3,10 @@ import affiliateScreenSVG from '../../../assets/heroes/affiliate.svg'
 
 export default function () {
   return (
-    <div className="flex flex-col w-full h-screen max-h-[-webkit-fill-available] justify-center items-center container">
+    <div
+      id="affiliate"
+      className="flex flex-col w-full h-screen max-h-[-webkit-fill-available] justify-center items-center container"
+    >
       <div className="h-[293px] md:w-[445px] md:h-[334px]">
         <img
           src={affiliateScreenSVG}

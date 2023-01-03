@@ -3,6 +3,10 @@ import { Fragment } from 'react'
 import { SELECTION } from '../../../App'
 import { HoloText } from '../../HoloText'
 import * as Card from '../../Cards'
+import PlayerScreen from '../Player/playerScreen'
+import ContributorScreen from '../Contributor/contributorScreen'
+import InvestorScreen from '../Investor/investorScreen'
+import AffiliateScreen from '../Affiliate/affiliateScreen'
 
 export default function MainScreen({
   handleClick

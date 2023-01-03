@@ -3,7 +3,10 @@ import playerScreenSVG from '../../../assets/heroes/player.svg'
 
 export default function PlayerScreen() {
   return (
-    <div className="flex flex-col w-full h-screen max-h-[-webkit-fill-available] justify-center items-center container">
+    <div
+      id="player"
+      className="flex flex-col w-full h-screen max-h-[-webkit-fill-available] justify-center items-center container"
+    >
       <div className="h-[293px] md:w-[445px] md:h-[334px]">
         <img
           src={playerScreenSVG}

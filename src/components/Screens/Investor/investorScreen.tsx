@@ -3,7 +3,10 @@ import investorScreenSVG from '../../../assets/heroes/investor.svg'
 
 export default function InvestorScreen() {
   return (
-    <div className="flex flex-col w-full h-screen max-h-[-webkit-fill-available] justify-center items-center container">
+    <div
+      id="investor"
+      className="flex flex-col w-full h-screen max-h-[-webkit-fill-available] justify-center items-center container"
+    >
       <div className="h-[293px] md:w-[445px] md:h-[334px]">
         <img
           src={investorScreenSVG}
