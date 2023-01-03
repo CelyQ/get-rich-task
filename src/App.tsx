@@ -34,7 +34,7 @@ export default function App() {
   return (
     <div className={`h-fit w-full bg-[#1d1f21] ${classes.gridbox}`}>
       <Parallax pages={8.5 + screenOffset}>
-        <ParallaxLayer factor={1 + screenOffset} offset={0}>
+        <ParallaxLayer factor={1.5 + screenOffset} offset={0}>
           <MainScreen handleClick={handleClick} />
         </ParallaxLayer>
 
