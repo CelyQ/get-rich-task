@@ -3,7 +3,7 @@ import PlayerScreenSVG from './playerScreenSVG'
 
 export default function PlayerScreen() {
   return (
-    <div className="flex flex-col w-full h-full justify-center items-center container">
+    <div className="flex flex-col w-full h-screen max-h-[-webkit-fill-available] justify-center items-center container">
       <PlayerScreenSVG />
       <h2 className="text-white text-2xl">The Player</h2>
       <p className="text-[#666666] text-sm md:max-w-[560px] text-center py-8">

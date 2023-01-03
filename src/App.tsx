@@ -85,7 +85,7 @@ export default function App() {
   return (
     <div className={`h-full w-full bg-[#1d1f21] ${classes.gridbox}`}>
       {renderBackButton()}
-      <div className="container mx-auto h-screen max-h-[-webkit-fill-available]">
+      <div className="container mx-auto max-h-[-webkit-fill-available]">
         {renderScreen()}
       </div>
     </div>

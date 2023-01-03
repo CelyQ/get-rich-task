@@ -3,7 +3,7 @@ import AffiliateScreenSVG from './affiliateScreenSVG'
 
 export default function () {
   return (
-    <div className="flex flex-col w-full h-full justify-center items-center container">
+    <div className="flex flex-col w-full h-screen max-h-[-webkit-fill-available] justify-center items-center container">
       <AffiliateScreenSVG />
       <h2 className="text-white text-2xl">The Affiliate</h2>
       <p className="text-[#666666] text-sm md:max-w-[560px] text-center py-8">
