@@ -30,7 +30,7 @@ export default function MainScreen({
         </div>
       </section>
       <section className="">
-        <div className="py-11 flex flex-col items-center">
+        <div className="flex flex-col items-center">
           <h2 className="uppercase text-white text-2xl text-center">
             SELECT YOUR CHARACTER
           </h2>
