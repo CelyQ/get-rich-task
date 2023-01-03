@@ -1,6 +1,6 @@
 import { CardContainer } from '../../../containers'
-import InvestorSVG from '../../../assets/investor.svg'
-import InvestorActiveSVG from '../../../assets/investorActive.svg'
+import InvestorSVG from '../../../assets/cards/investor.svg'
+import InvestorActiveSVG from '../../../assets/cards/investorActive.svg'
 
 export default function InvestorCard({ onClick }: { onClick: () => void }) {
   return (

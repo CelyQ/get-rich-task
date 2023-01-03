@@ -1,6 +1,6 @@
 import { CardContainer } from '../../../containers'
-import affiliateSVG from '../../../assets/affiliate.svg'
-import affiliateActiveSVG from '../../../assets/affiliateActive.svg'
+import affiliateSVG from '../../../assets/cards/affiliate.svg'
+import affiliateActiveSVG from '../../../assets/cards/affiliateActive.svg'
 
 export default function AffiliateCard({ onClick }: { onClick: () => void }) {
   return (

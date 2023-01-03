@@ -1,6 +1,6 @@
 import { CardContainer } from '../../../containers'
-import PlayerSVG from '../../../assets/player.svg'
-import PlayerActiveSVG from '../../../assets/playerActive.svg'
+import PlayerSVG from '../../../assets/cards/player.svg'
+import PlayerActiveSVG from '../../../assets/cards/playerActive.svg'
 
 export default function PlayerCard({ onClick }: { onClick: () => void }) {
   return (

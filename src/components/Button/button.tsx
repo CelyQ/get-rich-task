@@ -66,7 +66,7 @@ export default function Button({
 
   return (
     <button
-      className={`relative h-[44px] ${getShapeWidthClass()} flex justify-center items-center cursor-pointer group/button`}
+      className={`relative h-[44px] ${getShapeWidthClass()} flex justify-center items-center cursor-pointer group/button transition-transform duration-300 hover:scale-105`}
     >
       {renderShape()}
       <span className="text-white relative z-10">{text}</span>

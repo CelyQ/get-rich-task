@@ -1,6 +1,6 @@
 import { CardContainer } from '../../../containers'
-import contributorSVG from '../../../assets/contributor.svg'
-import contributorActiveSVG from '../../../assets/contributorActive.svg'
+import contributorSVG from '../../../assets/cards/contributor.svg'
+import contributorActiveSVG from '../../../assets/cards/contributorActive.svg'
 
 export default function ContributorCard({ onClick }: { onClick: () => void }) {
   return (

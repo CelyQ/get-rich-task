@@ -56,7 +56,7 @@ export default function App() {
     if (!selection) return null
     return (
       <span
-        className="md:hidden fixed top-0 left-0 p-8 cursor-pointer group/back-button"
+        className="fixed top-8 left-8 cursor-pointer group/back-button transition-transform duration-300 hover:scale-110"
         onClick={() => handleClick(null)}
       >
         <svg
