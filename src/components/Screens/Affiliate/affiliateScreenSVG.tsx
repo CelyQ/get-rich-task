@@ -4,6 +4,7 @@ export default function AffiliateScreenSVG() {
       width={445}
       height={321}
       viewBox="0 0 445 321"
+      className="md:w-[445px] md:h-[321px] w-full h-full"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
