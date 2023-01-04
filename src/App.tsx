@@ -29,20 +29,17 @@ export default function App() {
   const { width } = useWindowSize()
   const isMobile = width < 768
 
-  console.log('isMobile', isMobile)
-  console.log('width', width, 'px')
-
   const screenOffset = isMobile ? 1 : 0
 
   return (
-    <div className={`h-fit w-full bg-[#1d1f21] ${classes.gridbox}`}>
+    <div className={`h-fit w-full bg-[#1d1f21]`}>
       <Parallax pages={12 + screenOffset}>
         <ParallaxLayer offset={0}>
           <MainScreen handleClick={handleClick} />
         </ParallaxLayer>
 
         <ParallaxLayer
-          speed={1}
+          speed={0.5}
           sticky={{
             start: 1 + screenOffset,
             end: 2 + screenOffset
@@ -63,7 +60,7 @@ export default function App() {
         </ParallaxLayer>
 
         <ParallaxLayer
-          speed={1}
+          speed={0.5}
           sticky={{
             start: 4 + screenOffset,
             end: 5 + screenOffset
@@ -84,7 +81,7 @@ export default function App() {
         </ParallaxLayer>
 
         <ParallaxLayer
-          speed={1}
+          speed={0.5}
           sticky={{
             start: 6.5 + screenOffset,
             end: 9 + screenOffset
@@ -106,7 +103,7 @@ export default function App() {
         </ParallaxLayer>
 
         <ParallaxLayer
-          speed={1}
+          speed={0.5}
           sticky={{
             start: 10.5 + screenOffset,
             end: 11 + screenOffset

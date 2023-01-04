@@ -10,15 +10,19 @@ export default function MainScreen({
 }) {
   return (
     <Fragment>
-      <section className="flex flex-col items-center gap-1 pt-16 md:pt-40">
+      <section className="flex flex-col items-center gap-1 pt-16 md:pt-28">
         <HoloText />
-        <h3 className="uppercase text-white">WITH BLACKJACK.FUN</h3>
-        <div className="flex flex-col gap-0.5 items-center py-8 text-sm px-8">
-          <p className="text-[#666666] text-center py-2 md:py-0">
+        <h3 className="uppercase text-white text-xs leading-[18px] tracking-[10px] py-[3px]">
+          WITH BLACKJACK.FUN
+        </h3>
+        <div className="flex flex-col gap-0.5 items-center py-4 text-sm px-8">
+          <p className="text-[#666666] text-center py-2 md:py-0 text-sm leading-[22px]">
             BlackJack.fun is a complete Crypto Casino, with a focus on Blackjack
             Games.
           </p>
-          <p className="text-[#666666]">But we don’t stop there.</p>
+          <p className="text-[#666666] text-sm leading-[22px] text-center">
+            But we don’t stop there.
+          </p>
           <a
             className="text-[#45D8FF] cursor-pointer hover:underline"
             href="https://blackjack.fun/"
@@ -30,14 +34,27 @@ export default function MainScreen({
       </section>
       <section className="">
         <div className="flex flex-col items-center">
-          <h2 className="uppercase text-white text-2xl text-center">
+          <h2 className="uppercase text-white text-[23px] text-center pt-[99px] pb-[32px] leading-[34.5px] -tracking-[0.5px] font-medium px-[10px]">
             SELECT YOUR CHARACTER
           </h2>
-          <div className="h-full py-10 md:py-20 grid grid-cols-2 gap-y-20 sm:grid-cols-2 md:grid-cols-4 gap-x-8 md:gap-[56px] justify-center items-center flex-wrap">
-            <Card.Player onClick={() => handleClick('PLAYER')} />
-            <Card.Contributor onClick={() => handleClick('CONTRIBUTOR')} />
-            <Card.Investor onClick={() => handleClick('INVESTOR')} />
-            <Card.Affiliate onClick={() => handleClick('AFFILIATE')} />
+          {/* h-full py-10 md:py-20 grid grid-cols-2 gap-y-20 sm:grid-cols-2 md:grid-cols-4 gap-x-8 md:gap-[56px] justify-center items-center flex-wrap" */}
+          <div className="md:flex md:flex-wrap md:gap-x-[49.04px] md:px-[3px] md:p-0 md:gap-0 grid grid-cols-2 gap-y-20 sm:grid-cols-2 md:grid-cols-4 gap-x-8">
+            <Card.Player
+              onClick={() => handleClick('PLAYER')}
+              classNames="md:pr-[14.79px]"
+            />
+            <Card.Contributor
+              onClick={() => handleClick('CONTRIBUTOR')}
+              // classNames="md:pr-[49.04px]"
+            />
+            <Card.Investor
+              onClick={() => handleClick('INVESTOR')}
+              // classNames="md:pr-[61.51px]"
+            />
+            <Card.Affiliate
+              onClick={() => handleClick('AFFILIATE')}
+              classNames="md:pl-[12.47px]"
+            />
           </div>
         </div>
       </section>

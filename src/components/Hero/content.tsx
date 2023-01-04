@@ -30,7 +30,7 @@ export default function HeroContent({ type }: { type: SELECTION }) {
   }, [type])
 
   return (
-    <div className="container mx-auto flex flex-col justify-start items-center h-2/5 relative left-0 bottom-0">
+    <div className="container mx-auto flex flex-col justify-start items-center h-1/2 relative left-0 bottom-0">
       <h2 className="text-white text-2xl pt-8">{title}</h2>
       <p className="text-[#666666] text-sm md:max-w-[560px] text-center py-8">
         Donec rhoncus odio lacus, non blandit justo porttitor in. Curabitur
