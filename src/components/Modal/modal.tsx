@@ -1,7 +1,7 @@
 import type { ReactNode } from 'react'
 import { createPortal } from 'react-dom'
 
-import oval from '../../assets/oval.svg'
+import oval from '../../assets/close-button-oval.svg'
 
 export default function Modal({
   children,
