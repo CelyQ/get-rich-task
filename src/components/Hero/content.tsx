@@ -59,6 +59,26 @@ export default function HeroContent({ type }: { type: SELECTION }) {
               </span>
             </div>
           </div>
+          <div className="flex flex-col gap-y-[9px] pt-[26px] w-full">
+            <div className="flex flex-col w-full gap-y-[6px]">
+              <label htmlFor="" className="font-medium text-[10px] px-[34px]">
+                First Name
+              </label>
+              <input
+                type="text"
+                className="bg-[#212226] py-[10px] px-[34px] text-[#D5D6E4] text-[10px] leading-5 font-medium outline-none border border-[#2B2D30] focus:border-[#3CCEA2]"
+              />
+            </div>
+            <div className="flex flex-col w-full gap-y-[6px]">
+              <label htmlFor="" className="font-medium text-[10px] px-[34px]">
+                Last Name
+              </label>
+              <input
+                type="text"
+                className="bg-[#212226] py-[10px] px-[34px] text-[#D5D6E4] text-[10px] leading-5 font-medium outline-none border border-[#2B2D30] focus:border-[#3CCEA2]"
+              />
+            </div>
+          </div>
         </Modal>
       )}
     </>
