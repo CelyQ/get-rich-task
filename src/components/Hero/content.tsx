@@ -1,7 +1,10 @@
-import { useEffect, useState, ReactPortal } from 'react'
+import { useEffect, useState } from 'react'
 import { SELECTION } from '../../App'
 import { Button } from '../Button'
 import { Modal } from '../Modal'
+
+import infoOval from '../../assets/info-oval.svg'
+import infoI from '../../assets/info-i.svg'
 
 export default function HeroContent({ type }: { type: SELECTION }) {
   const [title, setTitle] = useState('')
@@ -45,7 +48,17 @@ export default function HeroContent({ type }: { type: SELECTION }) {
       </div>
       {isOpen && (
         <Modal onClose={() => setIsOpen(false)}>
-          <span className="hello">hello there!</span>
+          <div className="w-full flex items-center gap-x-[13px]">
+            <div className="relative h-[18px] w-[18px] pl-[11px] flex justify-center items-center">
+              <img src={infoOval} className="absolute" />
+              <img src={infoI} className="absolute" />
+            </div>
+            <div className="h-min">
+              <span className="text-[10px] text-[#808191] h-[20px] leading-5 font-medium">
+                All fields are mandatory
+              </span>
+            </div>
+          </div>
         </Modal>
       )}
     </>
