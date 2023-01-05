@@ -2,15 +2,25 @@ import { useEffect, useState } from 'react'
 import { SELECTION } from '../../App'
 import { Button } from '../Button'
 import { Modal } from '../Modal'
+import { Select } from '../Select'
 
 import infoOval from '../../assets/info-oval.svg'
 import infoI from '../../assets/info-i.svg'
+
+import formSubmitSVG from '../../assets/form/form-submit.svg'
 
 export default function HeroContent({ type }: { type: SELECTION }) {
   const [title, setTitle] = useState('')
   const [buttonText, setButtonText] = useState('')
 
   const [isOpen, setIsOpen] = useState(false)
+
+  type Option = {
+    value: string
+    label: string
+  } | null
+
+  const [selectedOption, setSelectedOption] = useState<Option>(null)
 
   useEffect(() => {
     switch (type) {
@@ -54,29 +64,80 @@ export default function HeroContent({ type }: { type: SELECTION }) {
               <img src={infoI} className="absolute" />
             </div>
             <div className="h-min">
-              <span className="text-[10px] text-[#808191] h-[20px] leading-5 font-medium">
+              <span className="text-[10px] text-[#808191] h-[20px] leading-5 font-medium font-inter">
                 All fields are mandatory
               </span>
             </div>
           </div>
-          <div className="flex flex-col gap-y-[9px] pt-[26px] w-full">
+          <div className="flex flex-col gap-y-[9px] pt-[26px] w-full font-inter">
             <div className="flex flex-col w-full gap-y-[6px]">
-              <label htmlFor="" className="font-medium text-[10px] px-[34px]">
+              <label
+                htmlFor="first-name"
+                className="font-medium text-[10px] px-[34px]"
+              >
                 First Name
               </label>
               <input
+                name="first-name"
                 type="text"
                 className="bg-[#212226] py-[10px] px-[34px] text-[#D5D6E4] text-[10px] leading-5 font-medium outline-none border border-[#2B2D30] focus:border-[#3CCEA2]"
               />
             </div>
             <div className="flex flex-col w-full gap-y-[6px]">
-              <label htmlFor="" className="font-medium text-[10px] px-[34px]">
+              <label
+                htmlFor="last-name"
+                className="font-medium text-[10px] px-[34px]"
+              >
                 Last Name
               </label>
               <input
+                name="last-name"
                 type="text"
                 className="bg-[#212226] py-[10px] px-[34px] text-[#D5D6E4] text-[10px] leading-5 font-medium outline-none border border-[#2B2D30] focus:border-[#3CCEA2]"
               />
+            </div>
+            <div className="flex flex-col w-full gap-y-[6px]">
+              <label
+                htmlFor="inquiry"
+                className="font-medium text-[10px] px-[34px]"
+              >
+                Inquiry
+              </label>
+              <Select />
+            </div>
+            <div className="flex flex-col w-full gap-y-[6px]">
+              <label
+                htmlFor="email"
+                className="font-medium text-[10px] px-[34px]"
+              >
+                Email
+              </label>
+              <input
+                name="email"
+                type="text"
+                className="bg-[#212226] py-[10px] px-[34px] text-[#D5D6E4] text-[10px] leading-5 font-medium outline-none border border-[#2B2D30] focus:border-[#3CCEA2]"
+              />
+            </div>
+            <div className="flex flex-col w-full gap-y-[6px]">
+              <label
+                htmlFor="message"
+                className="font-medium text-[10px] px-[34px]"
+              >
+                Message
+              </label>
+              <input
+                name="message"
+                type="textarea"
+                className="bg-[#212226] py-[10px] px-[34px] text-[#D5D6E4] text-[10px] leading-5 font-medium outline-none border border-[#2B2D30] focus:border-[#3CCEA2] h-[110px]"
+              />
+            </div>
+            <div className="py-[25px] flex justify-center items-center">
+              <button className="relative flex justify-center items-center">
+                <img src={formSubmitSVG} />
+                <span className="text-[16px] leading-6 font-medium font-poppins absolute">
+                  I WANT TO GET RICH
+                </span>
+              </button>
             </div>
           </div>
         </Modal>

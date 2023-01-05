@@ -64,7 +64,29 @@ export default function Button({
     }
   }
 
-  return (
+  const getHref = () => {
+    switch (type) {
+      case 'PLAYER':
+        return 'https://blackjack.fun/'
+      case 'AFFILIATE':
+        return 'https://partnersofblackjack.fun/'
+      default:
+        return '#'
+    }
+  }
+
+  const shouldOpenNewTab = type === 'PLAYER' || type === 'AFFILIATE'
+
+  return shouldOpenNewTab ? (
+    <a
+      href={getHref()}
+      target="_blank"
+      className={`relative h-[44px] ${getShapeWidthClass()} flex justify-center items-center cursor-pointer group/button transition-transform duration-300 hover:scale-105`}
+    >
+      {renderShape()}
+      <span className="text-white relative z-10">{text}</span>
+    </a>
+  ) : (
     <button
       onClick={onClick}
       className={`relative h-[44px] ${getShapeWidthClass()} flex justify-center items-center cursor-pointer group/button transition-transform duration-300 hover:scale-105`}
