@@ -1,13 +1,16 @@
-import { Fragment } from 'react'
+import { Fragment, useState } from 'react'
 import { SELECTION } from '../../../App'
 import { HoloText } from '../../HoloText'
 import * as Card from '../../Cards'
+import { Popup } from '../../Popup'
 
 export default function MainScreen({
   handleClick
 }: {
   handleClick: (s: SELECTION) => void
 }) {
+  const [isPopupOpen, setIsPopupOpen] = useState(false)
+
   return (
     <Fragment>
       <section className="flex flex-col items-center gap-1 pt-16 md:pt-28">
@@ -15,7 +18,7 @@ export default function MainScreen({
         <h3 className="uppercase text-white text-xs leading-[18px] tracking-[10px] py-[3px]">
           WITH BLACKJACK.FUN
         </h3>
-        <div className="flex flex-col gap-0.5 items-center py-4 text-sm px-8">
+        <div className="flex flex-col gap-0.5 items-center py-4 text-sm px-8 relative">
           <p className="text-[#666666] text-center py-2 md:py-0 text-sm leading-[22px]">
             BlackJack.fun is a complete Crypto Casino, with a focus on Blackjack
             Games.
@@ -23,13 +26,13 @@ export default function MainScreen({
           <p className="text-[#666666] text-sm leading-[22px] text-center">
             But we don’t stop there.
           </p>
-          <a
+          <span
             className="text-[#45D8FF] cursor-pointer hover:underline"
-            href="https://blackjack.fun/"
-            target="_blank"
+            onClick={() => setIsPopupOpen(true)}
           >
             READ OUR STORY
-          </a>
+          </span>
+          <Popup isOpen={isPopupOpen} setIsPopupOpen={setIsPopupOpen} />
         </div>
       </section>
       <section className="">

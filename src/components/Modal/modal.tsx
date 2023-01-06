@@ -3,14 +3,20 @@ import { createPortal } from 'react-dom'
 
 import oval from '../../assets/close-button-oval.svg'
 import x from '../../assets/close-button-x.svg'
+import useScrollLock from '../../hooks/useScrollLock'
 
 export default function Modal({
   children,
+  isOpen,
   onClose
 }: {
   children: ReactNode
+  isOpen: boolean
   onClose: () => void
 }) {
+  useScrollLock(isOpen)
+  if (!isOpen) return null
+
   const appRoot = document.getElementById('root') as HTMLElement
 
   return createPortal(
